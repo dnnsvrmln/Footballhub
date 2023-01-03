@@ -16,9 +16,9 @@ class LeagueService {
     "x-rapidapi-host": _apiUrl
   };
 
-  Future<League> getLeague(String leagueId) async {
+  Future<League> getLeague(String leagueId, String season) async {
     final queryParams = {
-      "season": "2022",
+      "season": season,
       "league": leagueId,
     };
     final uri = Uri.https(_apiUrl, _standingsPath, queryParams);

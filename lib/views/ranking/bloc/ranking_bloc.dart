@@ -9,11 +9,13 @@ part 'ranking_state.dart';
 
 class RankingBloc extends Bloc<RankingEvent, RankingState> {
   final LeagueService _leagueService;
+  final String season;
+  final String leagueId;
 
-  RankingBloc(this._leagueService) : super(RankingInitialState()) {
+  RankingBloc(this._leagueService, this.season, this.leagueId)
+      : super(RankingInitialState()) {
     on<LoadRankingEvent>((event, emit) async {
-      // TODO: Make league fetching dynamic
-      final league = await _leagueService.getMockLeague();
+      final league = await _leagueService.getLeague(leagueId, season);
       emit(
         RankingLoadedState(
           league.id,

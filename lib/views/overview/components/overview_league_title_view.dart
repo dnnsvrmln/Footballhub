@@ -20,7 +20,6 @@ class OverviewLeagueTitleView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Container(
           decoration: BoxDecoration(
-            // color: Colors.amber,
             borderRadius: BorderRadius.circular(20),
           ),
           child: SizedBox(
@@ -34,7 +33,7 @@ class OverviewLeagueTitleView extends StatelessWidget {
                     fit: BoxFit.contain,
                     width: 36,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   Column(
@@ -61,8 +60,8 @@ class OverviewLeagueTitleView extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Spacer(),
-                  Icon(Icons.arrow_forward_ios_rounded),
+                  const Spacer(),
+                  const Icon(Icons.arrow_forward_ios_rounded),
                 ],
               ),
             ),

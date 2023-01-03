@@ -9,20 +9,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:football_app/services/league_service.dart';
 
-// void main() {
-//   test('Name of league is Premier League', () async {
-//     WidgetsFlutterBinding.ensureInitialized();
+void main() {
+  var leagueService = LeagueService();
 
-//     var league = await LeagueService.getMockLeague();
+  test('Name of league is Premier League', () async {
+    WidgetsFlutterBinding.ensureInitialized();
 
-//     expect(league.name, "Premier League");
-//   });
+    var league = await leagueService.getMockLeague();
 
-//   test('Amount of Premier League clubs is 20', () async {
-//     WidgetsFlutterBinding.ensureInitialized();
+    expect(league.name, "Premier League");
+  });
 
-//     var league = await LeagueService.getMockLeague();
+  test('Amount of Premier League clubs is 20', () async {
+    WidgetsFlutterBinding.ensureInitialized();
 
-//     expect(league.standings[0].length, 20);
-//   });
-// }
+    var league = await leagueService.getMockLeague();
+
+    expect(league.standings[0].length, 20);
+  });
+}

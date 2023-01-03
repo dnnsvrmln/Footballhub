@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:football_app/models/overview_league.dart';
+import 'package:football_app/views/overview/bloc/overview_bloc.dart';
 import 'package:football_app/views/overview/components/season_selector.dart';
+import 'package:football_app/views/ranking/bloc/ranking_bloc.dart';
+import 'package:football_app/views/ranking/ranking_page.dart';
 
 import 'overview_league_title_view.dart';
 
@@ -22,8 +26,17 @@ class LeagueOverviewItem extends StatefulWidget {
     int leagueId,
     int season,
   ) {
-    print(leagueId);
-    print(season);
+    Navigator.of(buildContext).push(
+      MaterialPageRoute(
+        builder: (newContext) => BlocProvider.value(
+          value: BlocProvider.of<OverviewBloc>(buildContext),
+          child: RankingPage(
+            season: season.toString(),
+            leagueId: leagueId.toString(),
+          ),
+        ),
+      ),
+    );
   }
 }
 

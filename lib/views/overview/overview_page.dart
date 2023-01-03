@@ -20,14 +20,15 @@ class OverviewPage extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.all(0.0),
                 child: ListView.builder(
-                    itemCount: state.leaguesList.leagues.length,
-                    itemBuilder: (context, index) => LeagueOverviewItem(
-                          league: state.leaguesList.leagues[index],
-                          seasonsList: state.leaguesList.seasons,
-                        )),
+                  itemCount: state.leaguesList.leagues.length,
+                  itemBuilder: (context, index) => LeagueOverviewItem(
+                    league: state.leaguesList.leagues[index],
+                    seasonsList: state.leaguesList.seasons,
+                  ),
+                ),
               );
             } else {
-              return Text("Error loading");
+              return const CircularProgressIndicator();
             }
           },
         ),
