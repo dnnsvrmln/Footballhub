@@ -12,7 +12,7 @@ class StandingsHeader extends StatelessWidget {
         children: [
           Expanded(
             child: Row(
-              children: [
+              children: const [
                 Text(
                   '#',
                   style: TextStyle(
@@ -20,7 +20,7 @@ class StandingsHeader extends StatelessWidget {
                     fontSize: 12,
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   width: 20,
                 ),
                 Text(
@@ -36,7 +36,7 @@ class StandingsHeader extends StatelessWidget {
           Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+              children: const [
                 Text(
                   'Gesp.',
                   style: TextStyle(

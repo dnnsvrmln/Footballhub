@@ -12,7 +12,7 @@ class LeagueService {
   static const _standingsPath = "/standings";
   static const _teamsPath = "/teams";
   static const _headers = {
-    "x-rapidapi-key": rapidApiKeyDennis,
+    "x-rapidapi-key": rapidApiKeyCasper,
     "x-rapidapi-host": _apiUrl
   };
 

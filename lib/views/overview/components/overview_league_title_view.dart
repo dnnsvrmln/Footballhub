@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:football_app/models/overview_league.dart';
 import 'package:football_app/resources/constants.dart';
@@ -28,8 +29,12 @@ class OverviewLeagueTitleView extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: Row(
                 children: [
-                  Image.network(
-                    league.logoUrl,
+                  CachedNetworkImage(
+                    imageUrl: league.logoUrl,
+                    placeholder: (context, url) =>
+                        const CircularProgressIndicator(),
+                    errorWidget: (context, url, error) =>
+                        const Icon(Icons.error),
                     fit: BoxFit.contain,
                     width: 36,
                   ),

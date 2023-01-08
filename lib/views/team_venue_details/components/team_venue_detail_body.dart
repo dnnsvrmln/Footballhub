@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'team_venue_detail_team.dart';
 import 'team_venue_detail_venue.dart';
@@ -21,8 +22,10 @@ class TeamDetailBody extends StatelessWidget {
             width: double.infinity,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12.5),
-              child: Image.network(
-                teamVenue.venueImage,
+              child: CachedNetworkImage(
+                imageUrl: teamVenue.venueImage,
+                placeholder: (context, url) => new CircularProgressIndicator(),
+                errorWidget: (context, url, error) => new Icon(Icons.error),
                 fit: BoxFit.cover,
               ),
             ),

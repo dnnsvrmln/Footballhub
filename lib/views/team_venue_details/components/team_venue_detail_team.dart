@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import '../../../models/team_venue.dart';
 
@@ -74,8 +75,8 @@ class TeamVenueDetailTeam extends StatelessWidget {
               child: ListTile(
                 leading: const Icon(Icons.photo_camera_front_sharp),
                 title: const Text('Club Logo'),
-                trailing: Image.network(
-                  teamVenue.teamLogo,
+                trailing: CachedNetworkImage(
+                  imageUrl: teamVenue.teamLogo,
                   fit: BoxFit.cover,
                   // height: 50,
                 ),
