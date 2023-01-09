@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:football_app/models/overview_league.dart';
-import 'package:football_app/resources/constants.dart';
 
 class OverviewLeagueTitleView extends StatelessWidget {
   final OverviewLeague league;
@@ -22,6 +21,14 @@ class OverviewLeagueTitleView extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.white.withOpacity(0.4),
+                spreadRadius: -5,
+                blurRadius: 25,
+                offset: const Offset(0, 0),
+              ),
+            ],
           ),
           child: SizedBox(
             height: 100,

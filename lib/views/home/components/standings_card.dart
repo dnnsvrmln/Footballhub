@@ -17,15 +17,16 @@ class StandingsCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           border: Border(
             bottom: BorderSide(
+              color: Colors.grey.withOpacity(0.6),
               width: 1,
             ),
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
           child: Row(
             children: [
               Flexible(
@@ -45,10 +46,13 @@ class StandingsCard extends StatelessWidget {
                       child: Text(
                         standing.team.name,
                         style: const TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
                         ),
                       ),
+                    ),
+                    const SizedBox(
+                      width: 12,
                     ),
                   ],
                 ),
