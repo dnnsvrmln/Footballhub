@@ -47,14 +47,10 @@ class _HomePageState extends State<HomePage> {
         floatHeaderSlivers: true,
         headerSliverBuilder: (context, innerBoxIsScrolled) => [
           SliverAppBar(
-            backgroundColor: Theme.of(context).brightness == Brightness.light
-                ? appBackgroundColor
-                : appBackgroundColor,
+            backgroundColor: appBackgroundColor,
             expandedHeight: 108,
             elevation: 0,
-            iconTheme: Theme.of(context).brightness == Brightness.light
-                ? const IconThemeData(color: appTextColor)
-                : const IconThemeData(color: appTextColor),
+            iconTheme: const IconThemeData(color: appTextColor),
             flexibleSpace: FlexibleSpaceBar(
               title: Image.asset(
                 widget.leagueLogoString(),

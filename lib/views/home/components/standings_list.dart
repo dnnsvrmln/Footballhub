@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:football_app/views/overview/bloc/overview_bloc.dart';
 import 'package:football_app/views/team_details/team_details_page.dart';
-import 'package:football_app/views/team_venue_details/team_venue_detail_page.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 import './standings_header.dart';
 import './standings_card.dart';
