@@ -14,11 +14,12 @@ class StandingsHeader extends StatelessWidget {
           children: [
             Expanded(
               child: Row(
-                children: [
+                children: const [
                   Text(
                     '#',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Quicksand',
+                      fontWeight: FontWeight.w800,
                       fontSize: 12,
                     ),
                   ),
@@ -28,7 +29,8 @@ class StandingsHeader extends StatelessWidget {
                   Text(
                     'Club',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Quicksand',
+                      fontWeight: FontWeight.w800,
                       fontSize: 12,
                     ),
                   ),
@@ -42,28 +44,32 @@ class StandingsHeader extends StatelessWidget {
                   Text(
                     'Gesp.',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Quicksand',
+                      fontWeight: FontWeight.w800,
                       fontSize: 12,
                     ),
                   ),
                   Text(
                     'Goals',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Quicksand',
+                      fontWeight: FontWeight.w800,
                       fontSize: 12,
                     ),
                   ),
                   Text(
                     'DS',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Quicksand',
+                      fontWeight: FontWeight.w800,
                       fontSize: 12,
                     ),
                   ),
                   Text(
                     'Pnt.',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Quicksand',
+                      fontWeight: FontWeight.w800,
                       fontSize: 12,
                     ),
                   ),

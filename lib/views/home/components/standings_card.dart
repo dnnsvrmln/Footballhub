@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../resources/constants.dart';
 import '../../../models/standing.dart';
 
 class StandingsCard extends StatelessWidget {
@@ -35,6 +34,7 @@ class StandingsCard extends StatelessWidget {
                     Text(
                       standing.rank.toString(),
                       style: const TextStyle(
+                        fontFamily: 'Quicksand',
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
                       ),
@@ -46,6 +46,7 @@ class StandingsCard extends StatelessWidget {
                       child: Text(
                         standing.team.name,
                         style: const TextStyle(
+                          fontFamily: 'Quicksand',
                           fontWeight: FontWeight.w600,
                           fontSize: 16,
                         ),
@@ -64,6 +65,7 @@ class StandingsCard extends StatelessWidget {
                     Text(
                       standing.allGames.played.toString(),
                       style: const TextStyle(
+                        fontFamily: 'Quicksand',
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
                       ),
@@ -71,6 +73,7 @@ class StandingsCard extends StatelessWidget {
                     Text(
                       '${standing.allGames.goals.goalsFor.toString()}:${standing.allGames.goals.against.toString()}',
                       style: const TextStyle(
+                        fontFamily: 'Quicksand',
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
                       ),
@@ -78,6 +81,7 @@ class StandingsCard extends StatelessWidget {
                     Text(
                       standing.goalsDiff.toString(),
                       style: const TextStyle(
+                        fontFamily: 'Quicksand',
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
                       ),
@@ -85,6 +89,7 @@ class StandingsCard extends StatelessWidget {
                     Text(
                       standing.points.toString(),
                       style: const TextStyle(
+                        fontFamily: 'Quicksand',
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
                       ),

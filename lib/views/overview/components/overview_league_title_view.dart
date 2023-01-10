@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:football_app/models/overview_league.dart';
+import 'package:football_app/resources/constants.dart';
 
 class OverviewLeagueTitleView extends StatelessWidget {
   final OverviewLeague league;
@@ -55,7 +56,7 @@ class OverviewLeagueTitleView extends StatelessWidget {
                       Text(
                         league.name,
                         style: const TextStyle(
-                          // color: appDarkTextColor,
+                          color: appTextColor,
                           fontFamily: 'Quicksand',
                           fontWeight: FontWeight.w600,
                           fontSize: 18,
@@ -64,7 +65,7 @@ class OverviewLeagueTitleView extends StatelessWidget {
                       Text(
                         league.country,
                         style: const TextStyle(
-                          // color: appDarkTextColor,
+                          color: appTextColor,
                           fontFamily: 'Quicksand',
                           fontWeight: FontWeight.w400,
                           fontSize: 14,

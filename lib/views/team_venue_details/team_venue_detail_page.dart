@@ -17,7 +17,10 @@ class TeamVenueDetailPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           teamName,
-          style: const TextStyle(color: Colors.black),
+          style: const TextStyle(
+            fontFamily: 'Quicksand',
+            color: Colors.black,
+          ),
         ),
         iconTheme: const IconThemeData(
           color: Colors.black, //change your color here

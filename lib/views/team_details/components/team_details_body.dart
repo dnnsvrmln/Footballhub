@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:football_app/models/team_venue.dart';
 import 'package:football_app/resources/constants.dart';
+import 'package:football_app/views/team_details/components/team_details_info_body.dart';
 
 class TeamDetailsBody extends StatelessWidget {
   final TeamVenue team;
@@ -34,24 +34,13 @@ class TeamDetailsBody extends StatelessWidget {
               ),
             ),
           ],
-          body: Padding(
-            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
-            child: Column(children: [
-              Row(
-                children: [
-                  Text(
-                    team.teamName,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  Text(
-                    team.teamCountry,
-                  )
-                ],
-              )
-            ]),
+          body: Scaffold(
+            body: Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 20,
+              ),
+              child: TeamDetailsInfoBody(team: team),
+            ),
           ),
         ),
       ),
