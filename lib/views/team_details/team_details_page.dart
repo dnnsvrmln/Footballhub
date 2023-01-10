@@ -18,7 +18,7 @@ class _TeamDetailsPageState extends State<TeamDetailsPage> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: LeagueService().getTeamVenue(widget.teamId),
+      future: LeagueService().getMockTeamVenue(widget.teamId),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(

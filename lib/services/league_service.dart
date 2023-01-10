@@ -57,4 +57,10 @@ class LeagueService {
       rethrow;
     }
   }
+
+  Future<TeamVenue> getMockTeamVenue(String teamId) async {
+    final String response =
+        await rootBundle.loadString('lib/assets/mockTeamVenue.json');
+    return TeamVenue.fromJson(jsonDecode(response)['response'][0]);
+  }
 }

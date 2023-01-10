@@ -34,7 +34,25 @@ class TeamDetailsBody extends StatelessWidget {
               ),
             ),
           ],
-          body: Text(team.teamName),
+          body: Padding(
+            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+            child: Column(children: [
+              Row(
+                children: [
+                  Text(
+                    team.teamName,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  Text(
+                    team.teamCountry,
+                  )
+                ],
+              )
+            ]),
+          ),
         ),
       ),
     );
