@@ -2,7 +2,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:football_app/models/team_venue.dart';
 import 'package:football_app/resources/constants.dart';
-import 'package:football_app/views/team_details/components/team_details_info_square.dart';
+import 'package:football_app/views/team_details/components/team_details_info_square_section.dart';
+
+import 'team_details_info_details_item.dart';
 
 class TeamDetailsInfoBody extends StatelessWidget {
   const TeamDetailsInfoBody({
@@ -14,8 +16,7 @@ class TeamDetailsInfoBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
+    return ListView(
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -61,34 +62,56 @@ class TeamDetailsInfoBody extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 24,
+          height: 32,
         ),
-        SizedBox(
-          height: 134,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
+        TeamDetailsInfoSquareSection(team: team),
+        const SizedBox(
+          height: 32,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(
+            left: 20,
+            right: 20,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: TeamDetailsInfoSquare(
-                  squareType: 0,
-                  team: team,
+              const Text(
+                "Details",
+                style: TextStyle(
+                  color: appTextColor,
+                  fontFamily: 'Quicksand',
+                  fontSize: 24,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              TeamDetailsInfoSquare(
-                squareType: 1,
-                team: team,
+              const SizedBox(
+                height: 12,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: TeamDetailsInfoSquare(
-                  squareType: 2,
-                  team: team,
-                ),
+              TeamDetailsInfoDetailsItem(
+                itemString: team.venueName,
+                itemNaam: "Stadion",
+              ),
+              TeamDetailsInfoDetailsItem(
+                itemString: team.venueCity,
+                itemNaam: "Stad",
+              ),
+              TeamDetailsInfoDetailsItem(
+                itemString: team.venueAddress,
+                itemNaam: "Adres",
+              ),
+              TeamDetailsInfoDetailsItem(
+                itemString: team.venueCapacity.toString(),
+                itemNaam: "Capaciteit",
+              ),
+              TeamDetailsInfoDetailsItem(
+                itemString: team.venueSurface,
+                itemNaam: "Gras type",
               ),
             ],
           ),
-        ),
+        )
       ],
     );
   }

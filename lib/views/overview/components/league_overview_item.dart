@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:football_app/models/overview_league.dart';
+import 'package:football_app/resources/constants.dart';
 import 'package:football_app/views/home/home_page.dart';
 import 'package:football_app/views/overview/bloc/overview_bloc.dart';
 import 'package:football_app/views/overview/components/season_selector.dart';
@@ -44,20 +45,35 @@ class _LeagueOverviewItemState extends State<LeagueOverviewItem> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        OverviewLeagueTitleView(
-          league: widget.league,
-          onTap: (() =>
-              widget.selectLeague(context, widget.league.id, selectedSeason)),
+    return Container(
+      margin: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+      decoration: BoxDecoration(
+        color: appBackgroundColor,
+        borderRadius: const BorderRadius.all(
+          Radius.circular(12),
         ),
-        SeasonSelector(
-          seasonsList: widget.seasonsList,
-          updateParent: (season) {
-            selectedSeason = season;
-          },
-        ),
-      ],
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey.withOpacity(0.15),
+              spreadRadius: 5,
+              blurRadius: 5),
+        ],
+      ),
+      child: Column(
+        children: [
+          OverviewLeagueTitleView(
+            league: widget.league,
+            onTap: (() =>
+                widget.selectLeague(context, widget.league.id, selectedSeason)),
+          ),
+          SeasonSelector(
+            seasonsList: widget.seasonsList,
+            updateParent: (season) {
+              selectedSeason = season;
+            },
+          ),
+        ],
+      ),
     );
   }
 }

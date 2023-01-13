@@ -20,7 +20,7 @@ class TeamDetailsInfoSquare extends StatelessWidget {
       padding: const EdgeInsets.all(24.0),
       decoration: BoxDecoration(
         border: Border.all(
-          color: appTextColor,
+          color: appTextColor.withOpacity(0.2),
         ),
         borderRadius: const BorderRadius.all(
           Radius.circular(18.0),
@@ -60,7 +60,7 @@ class TeamDetailsInfoSquare extends StatelessWidget {
               } else if (squareType == 1) {
                 return "Code";
               } else {
-                return "Nationaal";
+                return "Land";
               }
             })(),
             style: const TextStyle(

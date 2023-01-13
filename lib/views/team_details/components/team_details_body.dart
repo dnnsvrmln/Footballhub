@@ -35,6 +35,7 @@ class TeamDetailsBody extends StatelessWidget {
             ),
           ],
           body: Scaffold(
+            backgroundColor: appBackgroundColor,
             body: Padding(
               padding: const EdgeInsets.symmetric(
                 vertical: 20,
