@@ -27,7 +27,7 @@ void main() {
           () async {
         WidgetsFlutterBinding.ensureInitialized();
 
-        var league = await LeagueService.getMockLeague(inputLeagueId);
+        var league = await LeagueService().getMockLeague(inputLeagueId);
 
         expect(league.name, expectedLeagueName);
       });
@@ -51,7 +51,7 @@ void main() {
           () async {
         WidgetsFlutterBinding.ensureInitialized();
 
-        var league = await LeagueService.getMockLeague(inputLeagueId);
+        var league = await LeagueService().getMockLeague(inputLeagueId);
 
         expect(league.standings[0].length, expectedLeagueTeams);
       });
@@ -75,7 +75,7 @@ void main() {
           () async {
         WidgetsFlutterBinding.ensureInitialized();
 
-        var league = await LeagueService.getMockLeague(inputLeagueId);
+        var league = await LeagueService().getMockLeague(inputLeagueId);
 
         expect(league.country, expectedLeagueCountry);
       });

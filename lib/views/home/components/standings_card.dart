@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../resources/constants.dart';
 import '../../../models/standing.dart';
 
 class StandingsCard extends StatelessWidget {
@@ -20,13 +19,13 @@ class StandingsCard extends StatelessWidget {
         decoration: BoxDecoration(
           border: Border(
             bottom: BorderSide(
-              color: appTextColor.withOpacity(0.2),
+              color: Colors.grey.withOpacity(0.6),
               width: 1,
             ),
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
           child: Row(
             children: [
               Flexible(
@@ -35,21 +34,26 @@ class StandingsCard extends StatelessWidget {
                     Text(
                       standing.rank.toString(),
                       style: const TextStyle(
+                        fontFamily: 'Quicksand',
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
-                        color: appTextColor,
                       ),
                     ),
                     const SizedBox(
                       width: 20,
                     ),
-                    Text(
-                      standing.team.name,
-                      style: const TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 14,
-                        color: appTextColor,
+                    Flexible(
+                      child: Text(
+                        standing.team.name,
+                        style: const TextStyle(
+                          fontFamily: 'Quicksand',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                        ),
                       ),
+                    ),
+                    const SizedBox(
+                      width: 12,
                     ),
                   ],
                 ),
@@ -61,33 +65,33 @@ class StandingsCard extends StatelessWidget {
                     Text(
                       standing.allGames.played.toString(),
                       style: const TextStyle(
+                        fontFamily: 'Quicksand',
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
-                        color: appTextColor,
                       ),
                     ),
                     Text(
                       '${standing.allGames.goals.goalsFor.toString()}:${standing.allGames.goals.against.toString()}',
                       style: const TextStyle(
+                        fontFamily: 'Quicksand',
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
-                        color: appTextColor,
                       ),
                     ),
                     Text(
                       standing.goalsDiff.toString(),
                       style: const TextStyle(
+                        fontFamily: 'Quicksand',
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
-                        color: appTextColor,
                       ),
                     ),
                     Text(
                       standing.points.toString(),
                       style: const TextStyle(
+                        fontFamily: 'Quicksand',
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
-                        color: appTextColor,
                       ),
                     )
                   ],

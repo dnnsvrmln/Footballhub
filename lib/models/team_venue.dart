@@ -1,8 +1,10 @@
 class TeamVenue {
   final int teamId;
   final String teamName;
+  final String teamCode;
   final String teamCountry;
   final int teamFounded;
+  final bool isNational;
   final String teamLogo;
   final int venueId;
   final String venueName;
@@ -15,8 +17,10 @@ class TeamVenue {
   const TeamVenue({
     required this.teamId,
     required this.teamName,
+    required this.teamCode,
     required this.teamCountry,
     required this.teamFounded,
+    required this.isNational,
     required this.teamLogo,
     required this.venueId,
     required this.venueName,
@@ -31,8 +35,10 @@ class TeamVenue {
     return TeamVenue(
       teamId: json['team']['id'] as int,
       teamName: json['team']['name'],
+      teamCode: json['team']['code'],
       teamCountry: json['team']['country'],
       teamFounded: json['team']['founded'] as int,
+      isNational: json['team']['national'] as bool,
       teamLogo: json['team']['logo'],
       venueId: json['venue']['id'] as int,
       venueName: json['venue']['name'],

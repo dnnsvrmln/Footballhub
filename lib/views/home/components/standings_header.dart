@@ -14,24 +14,24 @@ class StandingsHeader extends StatelessWidget {
           children: [
             Expanded(
               child: Row(
-                children: [
+                children: const [
                   Text(
                     '#',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Quicksand',
+                      fontWeight: FontWeight.w800,
                       fontSize: 12,
-                      color: appTextColor.withOpacity(0.8),
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 20,
                   ),
                   Text(
                     'Club',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Quicksand',
+                      fontWeight: FontWeight.w800,
                       fontSize: 12,
-                      color: appTextColor.withOpacity(0.8),
                     ),
                   ),
                 ],
@@ -40,37 +40,37 @@ class StandingsHeader extends StatelessWidget {
             Expanded(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Text(
                     'Gesp.',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Quicksand',
+                      fontWeight: FontWeight.w800,
                       fontSize: 12,
-                      color: appTextColor.withOpacity(0.8),
                     ),
                   ),
                   Text(
                     'Goals',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Quicksand',
+                      fontWeight: FontWeight.w800,
                       fontSize: 12,
-                      color: appTextColor.withOpacity(0.8),
                     ),
                   ),
                   Text(
                     'DS',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Quicksand',
+                      fontWeight: FontWeight.w800,
                       fontSize: 12,
-                      color: appTextColor.withOpacity(0.8),
                     ),
                   ),
                   Text(
                     'Pnt.',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Quicksand',
+                      fontWeight: FontWeight.w800,
                       fontSize: 12,
-                      color: appTextColor.withOpacity(0.8),
                     ),
                   ),
                 ],

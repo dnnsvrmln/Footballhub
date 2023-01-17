@@ -1,0 +1,30 @@
+{
+  "get": "teams",
+  "parameters": {
+    "id": "89"
+  },
+  "errors": [],
+  "results": 1,
+  "response": [
+    {
+      "team": {
+        "id": 89,
+        "name": "Dijon",
+        "code": "DIJ",
+        "country": "France",
+        "founded": 1936,
+        "national": false,
+        "logo": "https://media-3.api-sports.io/football/teams/89.png"
+      },
+      "venue": {
+        "id": 645,
+        "name": "Stade Gaston-Gérard",
+        "address": "Rue du Stade",
+        "city": "Dijon",
+        "capacity": 16098,
+        "surface": "grass",
+        "image": "https://media-1.api-sports.io/football/venues/645.png"
+      }
+    }
+  ]
+}

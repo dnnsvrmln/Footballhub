@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:football_app/views/overview/bloc/overview_bloc.dart';
+import 'package:football_app/views/team_details/team_details_page.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 import './standings_header.dart';
 import './standings_card.dart';
@@ -13,13 +16,14 @@ class StandingsList extends StatelessWidget {
   });
 
   void selectTeam(BuildContext buildContext, int teamId, String teamName) {
-    Navigator.of(buildContext).pushNamed(
-      '/team-detail',
-      arguments: {
-        'teamId': teamId.toString(),
-        'teamName': teamName,
-      },
-    );
+    Navigator.of(buildContext).push(MaterialPageRoute(
+      builder: (newContext) => BlocProvider.value(
+        value: BlocProvider.of<OverviewBloc>(buildContext),
+        child: TeamDetailsPage(
+          teamId: teamId.toString(),
+        ),
+      ),
+    ));
   }
 
   @override

@@ -9,14 +9,15 @@ class League {
   int season;
   List<List<Standing>> standings;
 
-  League(
-      {required this.id,
-      required this.name,
-      required this.country,
-      required this.logo,
-      required this.flag,
-      required this.season,
-      required this.standings});
+  League({
+    required this.id,
+    required this.name,
+    required this.country,
+    required this.logo,
+    required this.flag,
+    required this.season,
+    required this.standings,
+  });
 
   factory League.fromJson(Map<String, dynamic> json) => League(
         id: json["id"],

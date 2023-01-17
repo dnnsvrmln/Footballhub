@@ -4,8 +4,6 @@ import './components/team_venue_detail_body.dart';
 import '../../resources/constants.dart';
 
 class TeamVenueDetailPage extends StatelessWidget {
-  static const routeName = '/team-detail';
-
   const TeamVenueDetailPage({super.key});
 
   @override
@@ -19,7 +17,10 @@ class TeamVenueDetailPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           teamName,
-          style: const TextStyle(color: Colors.black),
+          style: const TextStyle(
+            fontFamily: 'Quicksand',
+            color: Colors.black,
+          ),
         ),
         iconTheme: const IconThemeData(
           color: Colors.black, //change your color here
