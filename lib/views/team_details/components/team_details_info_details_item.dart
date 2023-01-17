@@ -23,7 +23,7 @@ class TeamDetailsInfoDetailsItem extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.only(bottom: 12, top: 6),
+        padding: const EdgeInsets.only(bottom: 12, top: 18),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -36,13 +36,15 @@ class TeamDetailsInfoDetailsItem extends StatelessWidget {
                 fontWeight: FontWeight.w400,
               ),
             ),
-            Text(
-              itemString,
-              style: const TextStyle(
-                color: appTextColor,
-                fontFamily: 'Quicksand',
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
+            Flexible(
+              child: Text(
+                itemString,
+                style: const TextStyle(
+                  color: appTextColor,
+                  fontFamily: 'Quicksand',
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
           ],
