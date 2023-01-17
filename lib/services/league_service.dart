@@ -31,10 +31,30 @@ class LeagueService {
     }
   }
 
-  static Future<League> getMockLeague() async {
-    final String response =
-        await rootBundle.loadString('lib/assets/mockLeague.json');
+  static Future<League> getMockLeague(int leagueId) async {
+    final leagueName = _getLeagueName(leagueId);
+    final response =
+        await rootBundle.loadString('lib/assets/data/$leagueName/mock.json');
     return League.fromJson(jsonDecode(response)['response'][0]['league']);
+  }
+
+  static String _getLeagueName(int leagueId) {
+    switch (leagueId) {
+      case 39:
+        return "premier_league";
+      case 61:
+        return "ligue_1";
+      case 78:
+        return "bundesliga";
+      case 88:
+        return "eredivisie";
+      case 135:
+        return "serie_a";
+      case 140:
+        return "la_liga";
+      default:
+        return "No league name found";
+    }
   }
 
   static Future<TeamVenue> getTeamVenue(String teamId) async {
