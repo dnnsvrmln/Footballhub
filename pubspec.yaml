@@ -73,9 +73,14 @@ flutter:
     
 
   assets:
-    - lib/assets/mockLeague.json
     - lib/assets/leaguesOverview.json
     - lib/assets/mockTeamVenue.json
+    - lib/assets/data/bundesliga/mock.json
+    - lib/assets/data/eredivisie/mock.json
+    - lib/assets/data/la_liga/mock.json
+    - lib/assets/data/ligue_1/mock.json
+    - lib/assets/data/premier_league/mock.json
+    - lib/assets/data/serie_a/mock.json
     - lib/assets/images/premier-league-logo.png
     - lib/assets/images/eredivisie-brand-stamp-full.png
     - lib/assets/images/Bundesliga_logo_(2017).png

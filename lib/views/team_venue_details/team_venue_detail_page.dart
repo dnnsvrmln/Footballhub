@@ -29,7 +29,7 @@ class TeamVenueDetailPage extends StatelessWidget {
       ),
       backgroundColor: appBackgroundColor,
       body: FutureBuilder(
-        future: LeagueService().getTeamVenue(teamId),
+        future: LeagueService.getTeamVenue(teamId),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(

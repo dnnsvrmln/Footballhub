@@ -27,18 +27,21 @@ class TeamDetailsInfoDetailsItem extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              itemNaam,
-              style: const TextStyle(
-                color: appTextColor,
-                fontFamily: 'Quicksand',
-                fontSize: 18,
-                fontWeight: FontWeight.w400,
+            Expanded(
+              child: Text(
+                itemNaam,
+                style: const TextStyle(
+                  color: appTextColor,
+                  fontFamily: 'Quicksand',
+                  fontSize: 18,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
             ),
             Flexible(
               child: Text(
                 itemString,
+                textAlign: TextAlign.end,
                 style: const TextStyle(
                   color: appTextColor,
                   fontFamily: 'Quicksand',
